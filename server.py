@@ -21,64 +21,84 @@ def activity():
 
 @app.route("/dashboard")
 def dashboard():
-    html = """
+    rows = ""
+
+    for item in activities:
+        rows += f"""
+        <tr>
+            <td>{item["event"]}</td>
+            <td>{item["time"]}</td>
+        </tr>
+        """
+
+    return f"""
+    <!DOCTYPE html>
     <html>
     <head>
         <title>Security Test Dashboard</title>
         <style>
-            body {
+            body {{
                 font-family: Arial;
                 margin: 40px;
-            }
+            }}
 
-            table {
+            table {{
                 border-collapse: collapse;
                 width: 700px;
-            }
+            }}
 
-            th, td {
+            th, td {{
                 border: 1px solid #ccc;
-                padding: 10px;
-            }
+                padding: 12px;
+                text-align: left;
+            }}
 
-            th {
+            th {{
                 background: #eee;
-            }
+            }}
+
+            .test {{
+                margin-top: 30px;
+                padding: 20px;
+                border: 1px solid #ddd;
+            }}
         </style>
     </head>
 
     <body>
 
-        <h1>Security Test Activity</h1>
+        <h1>Security Test Dashboard</h1>
 
         <table>
             <tr>
                 <th>Event</th>
                 <th>Time</th>
             </tr>
-    """
 
-    for item in activities:
-        html += f"""
-            <tr>
-                <td>{item['event']}</td>
-                <td>{item['time']}</td>
-            </tr>
-        """
+            {rows}
 
-    html += """
         </table>
+
+        <div class="test">
+            <h2>Dummy Test Credentials</h2>
+
+            <p>
+                Username: <b>test-user</b>
+            </p>
+
+            <p>
+                Password: <b>TEST-ONLY-123</b>
+            </p>
+        </div>
 
     </body>
     </html>
     """
 
-    return html
-
 
 @app.route("/")
 def home():
-    return "Activity server is running."
+    return "Security test backend is running."
 
 
 if __name__ == "__main__":
