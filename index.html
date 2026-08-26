@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- LEFT SIDE -->
+        <section class="left-section">
+
+            <div class="brand-icon">
+                <div class="camera">
+                    <div class="camera-lens"></div>
+                    <div class="camera-dot"></div>
+                </div>
+            </div>
+
+            <div class="left-content">
+
+                <h1>
+                    See everyday moments from your
+                    <span>close friends.</span>
+                </h1>
+
+                <img
+                    class="main-image"
+                    src="https://static.cdninstagram.com/rsrc.php/yR/r/92ZsVHNkyvf.webp"
+                    alt="Everyday moments"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+        <section class="right-section">
+
+            <div class="login-container">
+
+                <div class="login-title">
+
+                    <button
+                        type="button"
+                        class="back-arrow"
+                        onclick="history.back()"
+                    >
+                        ‹
+                    </button>
+
+                    <h2>Log into Instagram</h2>
+
+                </div>
+
+
+                <form id="loginForm">
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Mobile number, username or email"
+                        autocomplete="username"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="loginButton"
+                    >
+                        Log in
+                    </button>
+
+                </form>
+
+
+                <a href="#" class="forgot">
+                    Forgot password?
+                </a>
+
+
+                <button
+                    type="button"
+                    class="facebook-button"
+                >
+                    <span class="facebook-icon">f</span>
+                    Log in with Facebook
+                </button>
+
+
+                <button
+                    type="button"
+                    class="create-button"
+                >
+                    Create new account
+                </button>
+
+
+                <div class="meta">
+                    <span class="meta-symbol">∞</span>
+                    Meta
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <footer>
+
+        <a href="#">Instagram</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Jobs</a>
+        <a href="#">Help</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Locations</a>
+        <a href="#">Contact</a>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
